@@ -8,15 +8,43 @@
 </head>
 <body>
 
-<form:form action = "/registration" modelAttribute = "user" method = "POST">
 
-<form:input path="username"/> Username <br/>
-<form:input path="password"/> Password <br/>
-<form:input path="email"/> Email <br/>
-<form:input path="country"/> Country <br/>
-<form:input path="city"/> City <br/>
-<button type = "submit">Register</button>
-</form:form>
+
+<form:form method="POST" modelAttribute="user">
+        <spring:bind path="username">
+            <div>
+                <form:input type="text" path="username" placeholder="Username"
+                            autofocus="true"></form:input>
+                <form:errors path="username"></form:errors>
+            </div>
+        </spring:bind>
+
+        <spring:bind path="password">
+            <div>
+                <form:input type="password" path="password" placeholder="Password"></form:input>
+                <form:errors path="password"></form:errors>
+            </div>
+        </spring:bind>
+
+        <spring:bind path="passwordConfirm">
+            <div>
+                <form:input type="password" path="passwordConfirm"
+                            placeholder="Confirm your password"></form:input>
+                <form:errors path="passwordConfirm"></form:errors>
+            </div>
+        </spring:bind>
+        
+        <spring:bind path="email">
+            <div>
+                <form:input type="text" path="email"
+                            placeholder="Email"></form:input>
+                <form:errors path="email"></form:errors>
+            </div>
+        </spring:bind>
+
+        <button type="submit">Submit</button>
+    </form:form>
+
 
 </body>
 </html>
