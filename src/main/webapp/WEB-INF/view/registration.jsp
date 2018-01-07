@@ -68,7 +68,6 @@
 								</div>
 							</spring:bind>
 
-
 							<button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
 						</form:form>
 					</div>
