@@ -67,12 +67,14 @@
 									<form:errors path="passwordConfirm"></form:errors>
 								</div>
 							</spring:bind>
-
+							
+							
 							<button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
 						</form:form>
 					</div>
 				</div>
 			</div>
+			
 			<div class="col-md-2"></div>
 		</div>
 	</div>
