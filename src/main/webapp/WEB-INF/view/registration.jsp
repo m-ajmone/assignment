@@ -25,7 +25,9 @@
 			<h1>Assignment 3 - MVC</h1>
 		</div>
 		<div class="row">
+		
 			<div class="col-md-2"></div>
+			
 			<div class="col-md-8">
 				<div class="panel panel-primary">
 					<div class="panel-heading">Registration</div>
