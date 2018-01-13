@@ -38,9 +38,11 @@ public class InitialDataLoader implements
         Role adminRole = roleRepository.findByName("ROLE_ADMIN");
         Role userRole = roleRepository.findByName("ROLE_USER");
         User user = new User();
-        user.setUsername("test");
-        user.setPassword("test");
-        user.setEmail("test@test.com");
+        user.setUsername("admin");
+        user.setPassword("admin");
+        user.setEmail("admin@admin.com");
+        user.setCountry("Cuba");
+        user.setCity("La Habana");
         user.setRoles(Arrays.asList(adminRole, userRole));
         userRepository.save(user);
         

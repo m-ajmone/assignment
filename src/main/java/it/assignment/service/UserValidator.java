@@ -42,7 +42,8 @@ public class UserValidator implements Validator {
 		String emailregex = "^([_a-zA-Z0-9-]+(\\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*(\\.[a-zA-Z]{1,6}))?$";
 		if(!(Pattern.matches(emailregex, user.getEmail()))) {
 			errors.rejectValue("email", "InvalidEmail");
-		}
+		}	
+		
 	}
 
 	@Override

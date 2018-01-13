@@ -71,8 +71,25 @@
 									<form:errors path="passwordConfirm" class="control-label"></form:errors>
 								</div>
 							</spring:bind>
-
-
+							
+							<spring:bind path="country">
+								<div class="form-group">
+									<label for="country">Country</label>
+									<form:input id="country" type="text"
+										path="country" placeholder="Country"
+										maxlength="30" class="form-control"></form:input>
+								</div>
+							</spring:bind>
+							
+							<spring:bind path="city">
+								<div class="form-group">
+									<label for="country">City</label>
+									<form:input id="city" type="text"
+										path="city" placeholder="City"
+										maxlength="30" class="form-control"></form:input>
+								</div>
+							</spring:bind>
+							
 							<button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
 						</form:form>
 					</div>
