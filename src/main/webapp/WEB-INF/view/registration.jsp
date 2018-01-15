@@ -7,15 +7,9 @@
 <html>
 <head>
 <title>Registration</title>
-<link href="<c:url value="/resources/css/assignment.css" />"
-	rel="stylesheet">
-<link
-	href="${pageContext.request.contextPath}/resources/css/assignment.css"
-	rel="stylesheet">
-<!--Bootstrap CSS-->
 <link rel="stylesheet"
 	href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css">
-<!--Bootstrap JS-->
+
 <script src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -25,9 +19,9 @@
 			<h1>Assignment 3 - MVC</h1>
 		</div>
 		<div class="row">
-		
+
 			<div class="col-md-2"></div>
-			
+
 			<div class="col-md-8">
 				<div class="panel panel-primary">
 					<div class="panel-heading">Registration</div>
@@ -71,25 +65,23 @@
 									<form:errors path="passwordConfirm" class="control-label"></form:errors>
 								</div>
 							</spring:bind>
-							
+
 							<spring:bind path="country">
 								<div class="form-group">
 									<label for="country">Country</label>
-									<form:input id="country" type="text"
-										path="country" placeholder="Country"
-										maxlength="30" class="form-control"></form:input>
+									<form:input id="country" type="text" path="country"
+										placeholder="Country" maxlength="30" class="form-control"></form:input>
 								</div>
 							</spring:bind>
-							
+
 							<spring:bind path="city">
 								<div class="form-group">
 									<label for="country">City</label>
-									<form:input id="city" type="text"
-										path="city" placeholder="City"
-										maxlength="30" class="form-control"></form:input>
+									<form:input id="city" type="text" path="city"
+										placeholder="City" maxlength="30" class="form-control"></form:input>
 								</div>
 							</spring:bind>
-							
+
 							<button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
 						</form:form>
 					</div>
