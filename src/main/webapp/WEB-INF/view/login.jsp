@@ -18,9 +18,9 @@
 		</div>
 		<div class="row">
 
-			<div class="col-md-2"></div>
+			<div class="col-md-3"></div>
 
-			<div class="col-md-8">
+			<div class="col-md-6">
 				<div class="panel panel-primary">
 					<div class="panel-heading">Login</div>
 					<div class="panel-body">
@@ -53,12 +53,12 @@
 							<button type="submit" class="btn btn-primary btn-lg btn-block">Log
 								in</button>
 						</form:form>
-						<span>${logout}</span>
+
 					</div>
 				</div>
 			</div>
 
-			<div class="col-md-2"></div>
+			<div class="col-md-3"></div>
 		</div>
 	</div>
 </body>
