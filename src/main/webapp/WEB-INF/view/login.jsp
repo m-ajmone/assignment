@@ -24,19 +24,20 @@
 				<div class="panel panel-primary">
 					<div class="panel-heading">Login</div>
 					<div class="panel-body">
-
+						<c:if test = "${success != null}">
+						<div class="alert alert-success">${success}</div>
+						</c:if>
 						<form method="POST" action="/login">
-
 							<div class="${error != null ? 'alert alert-danger' : ''}">${error}</div>
 							<div class="form-group">
 								<label for="username">Username</label> <input name="username"
 									type="text" maxlength="16" placeholder="Username"
-									autofocus="true" class="form-control"> </input>
+									autofocus="true" class="form-control"/>
 							</div>
 							<div class="form-group">
 								<label for="password">Password</label> <input name="password"
 									type="password" maxlength="16" placeholder="Password"
-									class="form-control"> </input> <input type="hidden"
+									class="form-control"/> <input type="hidden"
 									name="${_csrf.parameterName}" value="${_csrf.token}" />
 							</div>
 							<div class="form-group">

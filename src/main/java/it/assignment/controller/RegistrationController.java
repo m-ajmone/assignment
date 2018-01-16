@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import it.assignment.model.User;
 import it.assignment.service.UserService;
@@ -29,13 +30,14 @@ public class RegistrationController {
 	}
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public String registration(@ModelAttribute("user") User user, BindingResult bindingResult) {
+	public String registration(@ModelAttribute("user") User user, BindingResult bindingResult, RedirectAttributes ra) {
 		userValidator.validate(user, bindingResult);
 		if(bindingResult.hasErrors()) {
 			return("registration");
 		}
 		userService.save(user);
-		return("redirect:/index");
+		ra.addFlashAttribute("success", "You registered successfully!");
+		return("redirect:/login");
 	}
 
 }

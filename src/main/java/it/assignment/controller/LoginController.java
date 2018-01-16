@@ -14,13 +14,13 @@ public class LoginController {
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public ModelAndView login(String error) {
+		
 		ModelAndView model = new ModelAndView("login");
 	
-		
 		if(error != null)
 			model.addObject("error", "Invalid username or password");
+		
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-
 		if (!(auth instanceof AnonymousAuthenticationToken)) {
 		    return new ModelAndView("forward:/");
 		}

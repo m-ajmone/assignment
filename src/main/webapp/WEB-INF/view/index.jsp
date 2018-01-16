@@ -27,7 +27,8 @@
 				<h2>
 					Welcome <strong>${pageContext.request.userPrincipal.name}</strong>
 					<br /> <br /> <a class="btn btn-danger btn-lg" href="#"
-						role="button" onclick="document.forms['logoutForm'].submit()">Logout</a>
+						role="button" onclick="document.forms['logoutForm'].submit()"> <span
+					class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout</a>
 
 					<sec:authorize access="hasRole('ROLE_ADMIN')">
 						<a href="/userlist" class="btn btn-primary btn-lg" role="button">User

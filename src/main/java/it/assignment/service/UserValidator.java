@@ -30,7 +30,8 @@ public class UserValidator implements Validator {
         }
 		
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password", "Empty");
-		if (user.getPassword().length() < 8 || user.getPassword().length() > 16) {
+		String pswregex = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,16}$";
+		if (!(Pattern.matches(pswregex, user.getPassword()))) {
             errors.rejectValue("password", "PasswordLength");
         }
 		
