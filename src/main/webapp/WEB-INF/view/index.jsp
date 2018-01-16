@@ -17,7 +17,7 @@
 			<h1>Assignment 3 - MVC</h1>
 		</div>
 		<div class="jumbotron">
-			<h1>HELLO</h1>
+			<h1>Hi!</h1>
 			<c:if test="${pageContext.request.userPrincipal != null}">
 				<form id="logoutForm" method="POST" action="${contextPath}/logout">
 					<input type="hidden" name="${_csrf.parameterName}"

@@ -39,8 +39,13 @@
 									class="form-control"> </input> <input type="hidden"
 									name="${_csrf.parameterName}" value="${_csrf.token}" />
 							</div>
-							<button type="submit" class="btn btn-primary btn-lg btn-block">Log
-								in</button>
+							<div class="form-group">
+								<button type="submit" class="btn btn-primary btn-lg btn-block">Log
+									in</button>
+							</div>
+							<div class="form-group">
+								<span>Don't have an account? </span><a href="#" onclick="">Register</a>
+							</div>
 						</form>
 
 					</div>
