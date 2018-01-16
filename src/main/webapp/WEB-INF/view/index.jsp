@@ -26,12 +26,12 @@
 
 				<h2>
 					Welcome <strong>${pageContext.request.userPrincipal.name}</strong>
-					<br /> <br /> <a class="btn btn-primary btn-lg" href="#"
+					<br /> <br /> <a class="btn btn-danger btn-lg" href="#"
 						role="button" onclick="document.forms['logoutForm'].submit()">Logout</a>
 
 					<sec:authorize access="hasRole('ROLE_ADMIN')">
-						<button type="submit" class="btn btn-primary btn-lg">User
-							list</button>
+						<a href="/userlist" class="btn btn-primary btn-lg" role="button">User
+							list</a>
 					</sec:authorize>
 
 				</h2>

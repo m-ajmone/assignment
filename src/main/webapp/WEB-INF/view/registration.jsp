@@ -33,7 +33,7 @@
 					<div class="panel-body">
 						<form:form method="POST" modelAttribute="user">
 							<div class="form-group">
-								<span>Already have an account? </span><a href="#" onclick="">Login</a>
+								<span>Already have an account? </span><a href="/login">Login</a>
 							</div>
 							<spring:bind path="username">
 								<div class="form-group ${status.error ? 'has-error' : ''}">

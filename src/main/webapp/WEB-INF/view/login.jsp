@@ -44,7 +44,7 @@
 									in</button>
 							</div>
 							<div class="form-group">
-								<span>Don't have an account? </span><a href="#" onclick="">Register</a>
+								<span>Don't have an account? </span><a href="/registration">Register</a>
 							</div>
 						</form>
 
