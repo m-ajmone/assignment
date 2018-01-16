@@ -27,6 +27,9 @@
 						<c:if test = "${success != null}">
 						<div class="alert alert-success">${success}</div>
 						</c:if>
+						<c:if test = "${logout != null}">
+						<div class="alert alert-success">${logout}</div>
+						</c:if>
 						<form method="POST" action="/login">
 							<div class="${error != null ? 'alert alert-danger' : ''}">${error}</div>
 							<div class="form-group">
