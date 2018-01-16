@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="sec"
+	uri="http://www.springframework.org/security/tags"%>
 <html>
 <head>
 <link rel="stylesheet"
@@ -16,7 +18,7 @@
 		</div>
 		<div class="jumbotron">
 			<h1>HELLO</h1>
-			<c:if test="${pageContext.request.userPrincipal.name != null}">
+			<c:if test="${pageContext.request.userPrincipal != null}">
 				<form id="logoutForm" method="POST" action="${contextPath}/logout">
 					<input type="hidden" name="${_csrf.parameterName}"
 						value="${_csrf.token}" />
@@ -24,8 +26,14 @@
 
 				<h2>
 					Welcome <strong>${pageContext.request.userPrincipal.name}</strong>
-					<br /><br />
-					<a class="btn btn-primary btn-lg" href="#" role="button" onclick="document.forms['logoutForm'].submit()">Logout</a>
+					<br /> <br /> <a class="btn btn-primary btn-lg" href="#"
+						role="button" onclick="document.forms['logoutForm'].submit()">Logout</a>
+
+					<sec:authorize access="hasRole('ROLE_ADMIN')">
+						<button type="submit" class="btn btn-primary btn-lg">User
+							list</button>
+					</sec:authorize>
+
 				</h2>
 
 			</c:if>

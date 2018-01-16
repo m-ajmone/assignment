@@ -25,34 +25,23 @@
 					<div class="panel-heading">Login</div>
 					<div class="panel-body">
 
-						<form:form method="POST" modelAttribute="user" action="/login">
+						<form method="POST" action="/login">
 
 							<div class="${error != null ? 'alert alert-danger' : ''}">${error}</div>
-
-							<spring:bind path="username">
-								<div class="form-group ${status.error ? 'has-error' : ''}">
-									<label for="username">Username</label>
-									<form:input id="username" type="text" path="username"
-										maxlength="16" placeholder="Username" autofocus="true"
-										class="form-control"></form:input>
-								</div>
-							</spring:bind>
-
-
-							<spring:bind path="password">
-								<div class="form-group ${status.error ? 'has-error' : ''}">
-									<label for="password">Password</label>
-									<form:input id="password" type="password" path="password"
-										maxlength="16" placeholder="Password" class="form-control"></form:input>
-								</div>
-							</spring:bind>
-
-							<input type="hidden" name="${_csrf.parameterName}"
-								value="${_csrf.token}" />
-
+							<div class="form-group">
+								<label for="username">Username</label> <input name="username"
+									type="text" maxlength="16" placeholder="Username"
+									autofocus="true" class="form-control"> </input>
+							</div>
+							<div class="form-group">
+								<label for="password">Password</label> <input name="password"
+									type="password" maxlength="16" placeholder="Password"
+									class="form-control"> </input> <input type="hidden"
+									name="${_csrf.parameterName}" value="${_csrf.token}" />
+							</div>
 							<button type="submit" class="btn btn-primary btn-lg btn-block">Log
 								in</button>
-						</form:form>
+						</form>
 
 					</div>
 				</div>
