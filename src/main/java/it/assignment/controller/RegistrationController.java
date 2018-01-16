@@ -35,7 +35,6 @@ public class RegistrationController {
 			return("registration");
 		}
 		userService.save(user);
-		
 		return("redirect:/index");
 	}
 
