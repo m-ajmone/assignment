@@ -25,15 +25,17 @@
 			<h1>Assignment 3 - MVC</h1>
 		</div>
 		<div class="row">
-		
+
 			<div class="col-md-2"></div>
-			
+
 			<div class="col-md-8">
+				<a href="/" class="btn btn-primary" role="button"> <span
+					class="glyphicon glyphicon-home" aria-hidden="true"></span>
+					Homepage
+				</a> <br /> <br />
 				<div class="panel panel-primary">
 					<div class="panel-heading">Access Denied!</div>
-					<div class="panel-body">
-						${message}
-					</div>
+					<div class="panel-body">${message}</div>
 				</div>
 			</div>
 
