@@ -14,10 +14,27 @@
 
 </head>
 
+<style>
+.required-label:after {
+	content: " *";
+}
+</style>
 <script>
-	$('.dropdown-toggle').dropdown();
+	$(document).ready(function() {
+		$('.dropdown-toggle').dropdown();
+
+		$('[data-toggle="tooltip"]').tooltip();
+	});
 </script>
+
+<style>
+.required-label :after {
+	content: " *";
+}
+</style>
+
 <body>
+
 
 	<div class="container">
 		<div class="page-header">
@@ -37,17 +54,18 @@
 							</div>
 							<spring:bind path="username">
 								<div class="form-group ${status.error ? 'has-error' : ''}">
-									<label for="username">Username</label>
+									<label for="username" class="required-label">Username</label>
 									<form:input id="username" type="text" path="username"
 										maxlength="16" placeholder="Username" autofocus="true"
-										class="form-control"></form:input>
+										class="form-control" data-toggle="tooltip"
+										title="Insert a username with a length between 8 and 16 characters"></form:input>
 									<form:errors path="username" class="control-label"></form:errors>
 								</div>
 							</spring:bind>
 
 							<spring:bind path="email">
 								<div class="form-group ${status.error ? 'has-error' : ''}">
-									<label for="email">Email</label>
+									<label for="email" class="required-label">Email</label>
 									<form:input id="email" type="text" path="email" maxlength="50"
 										placeholder="Email" class="form-control"></form:input>
 									<form:errors path="email" class="control-label"></form:errors>
@@ -56,16 +74,19 @@
 
 							<spring:bind path="password">
 								<div class="form-group ${status.error ? 'has-error' : ''}">
-									<label for="password">Password</label>
+									<label for="password" class="required-label">Password</label>
 									<form:input id="password" type="password" path="password"
-										maxlength="16" placeholder="Password" class="form-control"></form:input>
+										maxlength="16" placeholder="Password" class="form-control"
+										data-toggle="tooltip"
+										title="Insert a password with a length between 8 and 16 characters"></form:input>
 									<form:errors path="password" class="control-label"></form:errors>
 								</div>
 							</spring:bind>
 
 							<spring:bind path="passwordConfirm">
 								<div class="form-group ${status.error ? 'has-error' : ''}">
-									<label for="password-confirm">Confirm password</label>
+									<label for="password-confirm" class="required-label">Confirm
+										password</label>
 									<form:input id="password-confirm" type="password"
 										path="passwordConfirm" placeholder="Confirm your password"
 										maxlength="16" class="form-control"></form:input>
@@ -345,6 +366,11 @@
 								</div>
 							</spring:bind>
 
+							<div class="form-group">
+								<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+								<span>Field marked with * are required.</span>
+							</div>
+
 							<button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
 						</form:form>
 					</div>
@@ -355,5 +381,7 @@
 		</div>
 	</div>
 
+
 </body>
+
 </html>
