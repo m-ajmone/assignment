@@ -24,6 +24,7 @@ public class InitialDataLoader implements
   
     @Autowired
     private RoleRepository roleRepository;
+    
   
     @Override
     @Transactional
