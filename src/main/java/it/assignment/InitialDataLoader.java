@@ -42,7 +42,7 @@ public class InitialDataLoader implements
         user.setUsername("admin");
         user.setPassword("admin");
         user.setEmail("admin@admin.com");
-        user.setCountry("Cuba");
+        user.setCountry("CU");
         user.setCity("La Habana");
         user.setRoles(Arrays.asList(adminRole, userRole));
         userRepository.save(user);

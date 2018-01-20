@@ -96,8 +96,8 @@
 
 							<spring:bind path="country">
 								<div class="form-group">
-									<label for="country">Country</label> <select id="country"
-										class="form-control">
+									<label for="country">Country</label> <form:select id="country"
+										class="form-control" path="country">
 										<option value="" selected="selected">-</option>
 										<option value="AF">Afghanistan</option>
 										<option value="AX">Åland Islands</option>
@@ -354,7 +354,7 @@
 										<option value="YE">Yemen</option>
 										<option value="ZM">Zambia</option>
 										<option value="ZW">Zimbabwe</option>
-									</select>
+									</form:select>
 								</div>
 							</spring:bind>
 
