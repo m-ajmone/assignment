@@ -11,9 +11,4 @@ public class IndexController {
 	public String index() {
 		return ("index");
 	}
-
-	@RequestMapping(value = { "/", "/index" }, method = RequestMethod.POST)
-	public String viewUserList() {
-		return ("redirect:/userList");
-	}
 }
