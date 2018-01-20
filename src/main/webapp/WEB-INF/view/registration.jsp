@@ -368,7 +368,7 @@
 
 							<div class="form-group">
 								<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-								<span>Field marked with * are required.</span>
+								<span>Fields marked with * are required.</span>
 							</div>
 
 							<button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
